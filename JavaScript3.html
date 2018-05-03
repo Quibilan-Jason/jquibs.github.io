@@ -42,6 +42,18 @@ function multiply(list, multiplier)
     products = list.map(function(list){return list * multiplier;});
     return products;
 }
+    
+function getBio()
+{
+    var jason = new Array();
+    jason["NFL"] = "Miami Dolphins";
+    jason["MLB"] = "Atlanta Braves";
+    jason["NBA"] = "San Antonio Spurs";
+    jason["NHL"] = "Pheonix Coyotes";
+    jason["NCAA"] = "Michigan Wolverines";
+    
+    alert("Jason's favorite teams are the " + jason["NFL"] + ", " + jason["MLB"] + ", " + jason["NBA"] + ", " + jason["NHL"] + ", and for college sports, the " + jason["NCAA"]);
+}
 
 </script>
 </head>
@@ -52,5 +64,8 @@ function multiply(list, multiplier)
 <button type="button" onclick="testFunctions()">Test</button>
 <br><br>
 <div id="outputDiv"></div>
+<h1>Associative Array example</h1>
+<h3>click the button to see my favorite sports teams</h3>
+<button type="button" onclick="getBio()">High Five</button>
 </body>
 </html>
