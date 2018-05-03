@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>"What shoes to wear"</title>
+
+<script type="text/javascript">
+/* Input: User enters type of weather today
+ * Processing: Determine what shoes to wear
+ * Output: shoe type
+ */
+function shoeFinder() {
+    // Get user input on weather
+    var weather = document.getElementById("weatherInputBox").value;
+	
+	// Choose a message
+	var message;
+	if (weather == "hot") {
+	    message = "Sandals";
+    }
+	else if (weather == "rain") {
+	    message = "Galoshes";
+	}
+	else if (weather == "snow") {
+	    message = "Boots";
+	}
+	else {
+	    message = "Shoes";
+	}
+	// Display message to user
+	document.getElementById("outputDiv").innerHTML = message;
+}
+</script>
+</head>
+
+<body>
+<h1>Please enter the type of weather today.</h1>
+    <p>Is it Hot, Rain, or Snow.</p>
+<input type="text" id="weatherInputBox" size="3">
+<br></br>
+<button type="button" onclick="shoeFinder()">Find Shoes</button>
+<br></br>
+<div id="outputDiv"></div>
+</body>
+</html>
