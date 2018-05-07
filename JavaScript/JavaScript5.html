@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+  <head>
+  <meta charset="utf-8">
+  <title>"Inheritance example"</title>
+  
+  <script type="text/javascript">
+      
+    // establish a parent class
+    function Parentclass()
+    {
+        this.parent_property1 = "Howzit";
+        this.parentmethod1 = function parentmethod1(argument1)
+        {
+            return argument1 + "Parent method1 return data ...";
+        }
+    }
+    
+    //establish a parent class
+    function Childclass()
+    {
+        this.child_property1 = "Aloha";
+        this.childmethod1 = function parentmethod1(argument1)
+        {
+            return argument1 + "Child method1 return data ...";
+        }
+    }
+      
+    // make the Childclass inherit all of the Parentclass characteristics
+    // by using the prototype property
+    Childclass.prototype = new Parentclass();
+      
+    // create a new instance of Childclass
+    var instance1 = new Childclass();                 
+      
+  </script>
+  </head>
+  <body>
+      <h1>Inheritance example</h1>
+      <p>Click test 1 to see if instance1 is an instance of Parentclass</p>
+      <button type="button" onClick="alert(instance1 instanceof Parentclass)">test 1</button>
+      <br>
+      <br>
+      <p>Click test 2 to see if instance1 is an instance of Childclass</p>
+      <button type="button" onClick="alert(instance1 instanceof Childclass)">test 2</button>
+      <br>
+      <br>
+      <p>Click test 3 to see if instance1 inherits the methods from the Parentclass</p>
+      <button type="button" onClick="alert(instance1.parentmethod1('RESULT: '))">test 3</button>
+      <br>
+      <br>
+      <p>Click test 4 to see if instance1 inherits the methods from the Childclass</p>
+      <button type="button" onClick="alert(instance1.childmethod1('RESULT: '))">test 4</button>
+      <br>
+      <br>
+      <p>Click test 5 to see if instance1 inherits the properties from the Parentclass</p>
+      <button type="button" onClick="alert(instance1.parent_property1)">test 5</button>
+      <br>
+      <br>
+      <p>Click test 6 to see if instance1 inherits the properties from the Parentclass</p>
+      <button type="button" onClick="alert(instance1.child_property1)">test 6</button>
+      <br>
+      <br>
+   </body>
+</html>     

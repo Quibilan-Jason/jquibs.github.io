@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+ <head>
+  <meta charset="utf-8">
+  <title>"Loops"</title>
+  
+  <script type="text/javascript">
+   /* Input:    User clicks button to reveal five times table.
+    * Process:  Define the five times table from 1 to 12 using for loop
+	* Output:   Display five times table.
+	*/
+	
+	function timesTable() 
+	    {
+	    //loop
+		var message = "";
+	    for (var i = 1; i <= 12; i++)
+		{
+		    message += "5 x " + i + " = " + 5 * i + "<br>";
+		}
+		
+		document.getElementById("outputDiv").innerHTML = message;
+	    }
+      
+   /* Input:    User clicks button to reveal desks being numbered.
+    * Process:  Count using the While loop
+	* Output:   Display the desks being numbered..
+	*/ 
+    
+    function desks()
+        {
+        var message = "";
+        var counter = 1;
+	    while (counter<=10)
+		{
+		    message += "This is Desk # " + counter + "<br>";
+            counter++;
+		}
+		
+		document.getElementById("outputDiv2").innerHTML = message;
+        }
+      
+  </script>
+
+ </head>
+  <body>
+   <h1>For loop example</h1>
+   <p>Click to see five times table</p>
+   <button type="button" onClick="timesTable()">Click</button>
+   <br>
+   <br>
+   <div id="outputDiv"></div>
+   <br>
+   <br>
+   <h1>While loop example</h1>
+   <p>Click to number each desk</p>
+   <button type="button" onClick="desks()">Click</button>
+   <br>
+   <br>
+   <div id="outputDiv2"></div>
+   <br>
+   <br>    
+  </body>
+</html>

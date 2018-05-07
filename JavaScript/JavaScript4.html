@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+ <head>
+  <meta charset="utf-8">
+  <title>"Instantiation example"</title>
+  
+  <script type="text/javascript">
+      
+      function employee(name,dept,shift)
+      {
+         
+          this.name = name;
+          this.dept = dept;
+          this.shift = shift;
+                      
+          
+      }
+      
+       var x = new employee("John", "Sales", "3rd");
+      
+      
+  </script>
+  </head>
+  <body>
+      <h1>Instantiation example</h1>
+      <p>Click to find employee</p>
+      <button type="button" onClick="alert('Name = ' + x.name + '\nDept = ' + x.dept + '\nShift = ' + x.shift)
+      ">Find</button>
+   <br>
+   <br>
+  </body>
+  </html>

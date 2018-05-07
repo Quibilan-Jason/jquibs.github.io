@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Find even numbers and multiply array with multiplier</title>
+
+<script type="text/javascript">
+/* Input:  no user input
+ * Processing: find even number in array, and then multiply numbers in array with a multiplier
+ * Output:  display the even numbers in array, and display array list if each number was multiplied by multiplier
+ */
+
+ function testFunctions() 
+{
+    var list = [17, 8, 9, 5, 20];
+    var multiplier = 3;
+    resultFunction1 = countEvens(list);
+    resultFunction2 = multiply(list, multiplier);
+    display = "The even numbers are: " + "<br><br>" + resultFunction1 + "<br><br>" + "If you multipy each number in array by 3, the array is: " + "<br><br>" + resultFunction2;
+    document.getElementById("outputDiv").innerHTML = display;
+}
+    
+function countEvens(list) 
+{
+    var evens = [];
+    for (var i = 0; i < list.length; ++i) 
+	{
+        if ((list[i] % 2) == 0) 
+		{
+            evens.push(list[i]);
+        }
+    }
+    return evens;
+}
+    
+function multiply(list, multiplier) 
+{
+    var products;
+	// took me a while to figure this out, went to w3schools.com and
+	// discovermeteor.com to understand the map() function
+    products = list.map(function(list){return list * multiplier;});
+    return products;
+}
+    
+function getBio()
+{
+    var jason = new Array();
+    jason["NFL"] = "Miami Dolphins";
+    jason["MLB"] = "Atlanta Braves";
+    jason["NBA"] = "San Antonio Spurs";
+    jason["NHL"] = "Pheonix Coyotes";
+    jason["NCAA"] = "Michigan Wolverines";
+    
+    alert("Jason's favorite teams are the " + jason["NFL"] + ", " + jason["MLB"] + ", " + jason["NBA"] + ", " + jason["NHL"] + ", and for college sports, the " + jason["NCAA"]);
+}
+
+</script>
+</head>
+<body>
+<h1>Find the even numbers in array and multiply array by a multiplier.</h1>
+<h2>Array list [17, 8, 9, 5, 20]</h2>
+<h3>Click the button to test functions</h3>
+<button type="button" onclick="testFunctions()">Test</button>
+<br><br>
+<div id="outputDiv"></div>
+<h1>Associative Array example</h1>
+<h3>click the button to see my favorite sports teams</h3>
+<button type="button" onclick="getBio()">High Five</button>
+</body>
+</html>
