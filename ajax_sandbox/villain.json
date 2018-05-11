@@ -1,0 +1,17 @@
+[
+    {
+    "name": "Red Skull",
+    "alias": "Johann Shmidt",
+    "team": "Hydra"
+    },
+    {
+    "name": "Doctor Doom",
+    "alias": "Victor von Doom",
+    "team": "Cabal"
+    },
+    {
+    "name": "Green Goblin",
+    "alias": "Norman Osborn",
+    "team": "H.A.M.M.E.R"
+    }
+]

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>local json</title>
+</head>
+<body>
+  <button id="button1">Get Hero</button>
+  <button id="button2">Get Villain</button>
+  <br><br>
+  <h1>Hero</h1>
+  <div id="hero"></div>
+  <h1>Villains</h1>
+  <div id="villain"></div>
+
+  <script>
+    document.getElementById('button1').addEventListener('click', loadHero);
+    document.getElementById('button2').addEventListener('click', loadVillain);
+
+  function loadHero() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('Get', 'hero.json', true);
+
+    xhr.onload = function() {
+      if(this.status == 200) {
+        var hero = JSON.parse(this.responseText);
+        //console.log(hero.name);
+
+        var output = '';
+
+        output += '<ul>' +
+          '<li>Name: '+hero.name+'</li>' +
+          '<li>Alias: '+hero.alias+'</li>' +
+          '<li>Team: '+hero.team+'</li>' +
+          '</ul>';
+          document.getElementById('hero').innerHTML = output;
+      }
+    }
+    xhr.send();
+  }
+
+  function loadVillain() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('Get', 'villain.json', true);
+
+    xhr.onload = function() {
+      if(this.status == 200) {
+        var villain = JSON.parse(this.responseText);
+        //console.log(hero.name);
+
+        var output = '';
+
+        for(var i in villain){
+        output += '<ul>' +
+          '<li>Name: '+villain[i].name+'</li>' +
+          '<li>Alias: '+villain[i].alias+'</li>' +
+          '<li>Team: '+villain[i].team+'</li>' +
+          '</ul>';
+        }
+          document.getElementById('villain').innerHTML = output;
+      }
+    }
+    xhr.send();
+  }
+
+
+  </script>
+
+</body>
+</html>

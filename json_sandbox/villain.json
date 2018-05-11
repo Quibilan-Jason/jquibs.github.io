@@ -1,0 +1,20 @@
+{
+  "villain": [
+    {
+    "name": "Kingpin",
+    "alias": "Wilson Fisk"
+    },
+    {
+    "name": "Doctor Doom",
+    "alias": "Victor von Doom"
+    },
+    {
+    "name": "Green Goblin",
+    "alias": "Norman Osborn"
+    },
+    {
+    "name": "Magneto",
+    "alias": "Max Eisenhardt"
+    }
+  ]
+}
