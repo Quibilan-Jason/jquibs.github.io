@@ -1,9 +1,9 @@
 
 /* * is a wildcard referring to all elements. */
-* { margin: 0; box-sizing: border-box; } 
+* { margin: 0; box-sizing: border-box; }
 
-body { 
-    font-size: 16px; 
+body {
+    font-size: 16px;
     line-height: 32px;
     font-family: Ubuntu, sans-serif;
     color: black;
@@ -40,4 +40,28 @@ header img {
 
 footer {
     font-size: 1.2rem;
+}
+
+.flip:hover {
+  transform: rotateY(180deg);
+}
+
+.front {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.back {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    background: orange;
+    transform: rotateY(180deg);
 }
