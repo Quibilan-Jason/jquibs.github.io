@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+  <html>
+    <body>
+      <h1>DOM Manipulation Demo</h1>
+
+      <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Juice</li>
+      </ul>
+
+      <p>Click the button to insert Water to the list.</p>
+
+      <button onclick="myFunction()">Try it</button>
+      <br>
+
+      <p>Click the button to remove the first item in the list.</p>
+      <button onclick="myFunction2()">Try it2</button>
+      <br>
+
+      <p>Click the button to replace only Water w/ rootbeer float in the list.</p>
+      <button onclick="myFunction3()">Try it2</button>
+
+        <script>
+            function myFunction() {
+              var newItem = document.createElement("LI");
+              var textnode = document.createTextNode("Water");
+              newItem.appendChild(textnode);
+
+              var list = document.getElementById("myList");
+              list.insertBefore(newItem, list.childNodes[0]);
+            }
+
+            function myFunction2() {
+              var list = document.getElementById("myList");
+              list.removeChild(list.childNodes[0]);
+            }
+
+            function myFunction3() {
+              var textnode = document.createTextNode("No, I want a rootbeer float");
+              var item = document.getElementById("myList").childNodes[0];
+              item.replaceChild(textnode, item.childNodes[0]);
+            }
+
+        </script>
+
+    </body>
+  </html>
