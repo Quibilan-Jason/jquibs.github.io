@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style type="text/css">
+        .class1{ float:left; margin:10px; background: black; width:100px; height: 100px; cursor:pointer; }
+        .class2{ float:left; margin:10px; background: red; width:100px; height: 100px; cursor:pointer; }
+        .class3{ float:left; margin:10px; background: green; width:100px; height: 100px; cursor:pointer; }
+        .class4{ float:left; margin:10px; background: yellow; width:100px; height: 100px; cursor:pointer; }
+      </style>
+      <script>
+        function toggleClass (el) {
+          if(el.className == "class1") {
+            el.className = "class2";
+          } else {
+            el.className = "class1";
+          }
+        }
+
+        function toggleClass2 (el) {
+          var kids = document.getElementById('menu1').children;
+            for (var i = 0; i < kids.length; i++) {
+              kids[i].className = "class3";
+            }
+            el.className = "class4";
+        }
+      </script>
+    </head>
+      <body>
+
+          <h1>Toggle CSS class of a clicked element</h1>
+            <div class="class1" onclick="toggleClass(this)"></div>
+            <div class="class1" onclick="toggleClass(this)"></div>
+            <div class="class1" onclick="toggleClass(this)"></div>
+            <div class="class1" onclick="toggleClass(this)"></div>
+          <br>
+
+          <h1>Changing CSS class, child element inside child array</h1>
+          <div id="menu1">
+            <div class="class3" onclick="toggleClass2(this)"></div>
+            <div class="class4" onclick="toggleClass2(this)"></div>
+            <div class="class4" onclick="toggleClass2(this)"></div>
+            <div class="class4" onclick="toggleClass2(this)"></div>
+        </div>
+      </body>
+  </html>
