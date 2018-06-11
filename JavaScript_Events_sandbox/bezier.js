@@ -4,24 +4,24 @@ window.onload = function() {
 		width = canvas.width = window.innerWidth,
 		height = canvas.height = window.innerHeight,
 		handle0 = {
-			x: 100, 
+			x: 100,
 			y: 100,
 			radius: 15
 		},
 		handle1 = {
-			x: 400, 
+			x: 400,
 			y: 400,
-			radius: 15			
+			radius: 15
 		},
 		handle2 = {
-			x: 700, 
+			x: 700,
 			y: 100,
-			radius: 15			
+			radius: 15
 		},
 		handle3 = {
-			x: 1000, 
+			x: 1000,
 			y: 500,
-			radius: 15			
+			radius: 15
 		},
 		handles = [handle0, handle1, handle2, handle3],
 		offset = {},
@@ -35,9 +35,7 @@ window.onload = function() {
 
 		context.beginPath();
 		context.moveTo(handle0.x, handle0.y);
-		context.bezierCurveTo(handle1.x, handle1.y, 
-							  handle2.x, handle2.y,
-							  handle3.x, handle3.y);
+		context.bezierCurveTo(handle1.x, handle1.y, handle2.x, handle2.y, handle3.x, handle3.y);
 		context.stroke();
 
 		context.fillStyle = "lightgreen";
@@ -52,7 +50,7 @@ window.onload = function() {
 			context.beginPath();
 			context.arc(handle.x, handle.y, handle.radius, 0, Math.PI * 2, false);
 			context.fill();
-			
+
 			context.shadowColor = null;
 			context.shadowOffsetX = null;
 			context.shadowOffsetY = null;
@@ -83,8 +81,8 @@ window.onload = function() {
 
 	function onMouseUp(event) {
 		document.body.removeEventListener("mousemove", onMouseMove);
-		document.body.removeEventListener("mouseup", onMouseUp);	
+		document.body.removeEventListener("mouseup", onMouseUp);
 		isDragging = false;
-		draw();	
+		draw();
 	}
 };

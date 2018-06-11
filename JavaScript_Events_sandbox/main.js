@@ -30,6 +30,8 @@ window.onload = function() {
 		}
 	});
 
+	//when don't click on the center of circle, when you move it will abruptly center itself to the pointer
+	//this will prevent that from happening.
 	function onMouseMove(event) {
 		handle.x = event.clientX;// - offset.x;
 		handle.y = event.clientY;// - offset.y;
