@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">            
+        <title>Standard Events (Mobile/Animation/Transition) Demo</title>   	
+	   <link href="standard_events.css" rel="stylesheet">    
+        <link href="normalize.css" rel="stylesheet">
+    </head>
+    <body class="test" onload="onLoad()">
+        <header>
+		  <h1><strong>Standard JavaScript Events</strong>
+              <br><small>Including Mobile, Animation, and Transition</small>
+          </h1>
+          <br>
+    </header>
+    <div >
+		<script>
+        (function() {
+				document.onmousemove = handleMouseMove;
+				function handleMouseMove(event) {
+					var dot, eventDoc, doc, body, pageX, pageY;
+					event = event || window.event; // IE-ism
+					// If pageX/Y aren't available and clientX/Y are,
+					// calculate pageX/Y - logic taken from jQuery.
+					// (This is to support old IE)
+					if (event.pageX == null && event.clientX != null) {
+						eventDoc = (event.target && event.target.ownerDocument) || document;
+						doc = eventDoc.documentElement;
+						body = eventDoc.body;
+						event.pageX = event.clientX +
+						(doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+						(doc && doc.clientLeft || body && body.clientLeft || 0);
+						event.pageY = event.clientY +
+						(doc && doc.scrollTop  || body && body.scrollTop  || 0) -
+						(doc && doc.clientTop  || body && body.clientTop  || 0 );
+					}
+					// Use event.pageX / event.pageY here
+					document.getElementById("coords").innerHTML = "Pos: " + event.pageX + "," + event.pageY;
+				}
+			})();
+            </script>
+            <h4>X,Y co-ordinates for pointer</h4>
+			<p id="coords"></p>
+    </div>	
+	<br>
+    <div>		
+        <div>
+        <h4>Hide on Click</h4>
+        <div class="blue center-text" id="fade-out-on-click" style="width: 100px; height: 100px;">
+            Click me to hide
+        </div>
+		</div>
+        <br>
+		<div>
+        	<h4>onTouch circle</h4>
+        	<p>Click button to create a circle
+               <br>
+               You can drag and move circle with mouse or touch screen
+               </p>
+			<button onclick="createDraggableCircle()">Click</button>
+		</div>
+        <br>
+        <div>
+            <p>Click on link to tickle the ol' virtual irvory keys</p>
+             <h4><a href="piano.html">Piano Player</a></h4>
+        </div>
+	</div>	
+    </body>
+        <script src="standard_events.js"></script>    
+</html>
