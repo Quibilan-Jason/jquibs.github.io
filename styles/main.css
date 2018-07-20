@@ -140,3 +140,40 @@ footer {
     opacity: .5;
     filter: blur(40px);
 }
+
+.neon3
+{
+  position: absolute;
+  margin: 0;
+  padding: 0 20px;
+  font-size: 2em;
+  color: #fff;
+  text-shadow: 0 0 20px lightblue;
+
+}
+
+.neon3:after
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding 0 20px;
+    z-index: -1;
+    color: lightgreen;
+    filter: blur(15px);
+}
+
+.neon3:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff3a80;
+    z-index: -2;
+    opacity: .5;
+    filter: blur(40px);
+}
