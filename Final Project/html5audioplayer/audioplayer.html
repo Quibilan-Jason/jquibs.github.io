@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>HTML5 Audio Player</title>
+    <link rel="stylesheet" href="css/audioplayerstyle.css" media="screen">
+  </head>
+  <body>
+    <header>
+      <h1>Some Awesome Songs</h1>
+      <br>
+      <a href="../3Dcube.html"><button class="button button5">Return to Cube</button></a>
+      <style>
+        .button5 {
+          background-color: white;
+          color: black;
+          border: 2px solid #555555;
+        }
+
+        .button5:hover {
+          background-color: #555555;
+          color: white;
+        }
+      </style>
+    </header>
+
+    <div id="container">
+	    <div id="audio-image">
+		    <img class="cover" />
+    	</div>
+	    <div id="audio-player">
+		    <div id="audio-info">
+		    	<span class="artist"></span> - <span class="title"></span>
+	    	</div>
+		      <input id="volume" type="range" min="0" max="10" value="5" />
+		      <br>
+		        <div id="buttons">
+		          <span>
+		          	<button id="prev"></button>
+		          	<button id="play"></button>
+			          <button id="pause"></button>
+		          	<button id="stop"></button>
+		          	<button id="next"></button>
+		        	</span>
+		        </div>
+		  <div class="clearfix"></div>
+		    <div id="tracker">
+			  <div id="progressBar">
+				  <span id="progress"></span>
+			  </div>
+			    <span id="duration"></span>
+		    </div>
+		  <div class="clearfix"></div>
+		     <ul id="playlist" class="hidden">
+			     <li song="Earth Song.mp3" cover="cover2.jpg" artist="Michael Jackson">Earth Song.mp3</li>
+			     <li song="Over the Rainbow.mp3" cover="cover3.jpg" artist="Israel Kamakawiwo'ole">Over the Rainbow.mp3</li>
+			     <li song="Summer Vibe.mp3" cover="cover4.jpeg" artist="Walk Off the Earth">Summertime Vibe.mp3</li>
+		     </ul>
+	    </div>
+    </div>
+
+      <script src="js/jquery.js"></script>
+      <script src="js/audioplayer.js"></script>
+  </body>
+</html>

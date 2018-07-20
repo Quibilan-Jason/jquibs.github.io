@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+  <html>
+
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Final project CIT261 3D-cube</title>
+
+      <link rel="stylesheet" href="css/experiment-styles.css" />
+
+      <link rel="stylesheet" href="css/touch.css" />
+
+      <link rel="stylesheet" href="css/style.css" />
+
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+      <script src="js/sketch.js"></script>
+    </head>
+
+    <body class="experiment" style="margin: 0; overflow: hidden;">
+      <div class="wrapper">
+        <p class="learn">This is my fun cube!</p>
+
+        <article class="viewport">
+          <section class="cube">
+            <!-- face one -->
+            <div>
+              <h1>Music Player</h1>
+              <br>
+              <p>Click on the image to play music
+              <br>
+              <br>
+              <a href="html5audioplayer/audioplayer.html">
+                <img src="html5audioplayer/images/musicnotes0.gif" width="360" height="250">
+              </a>
+              </p>
+            </div>
+
+            <!-- face two -->
+            <div>
+              <!-- Inro card flip -->
+              <div class="smallbox">
+                <div class="front">
+                  <p><img src="images/hello.jpg" width="350" height="350" alt="Hello Picture"></p>
+                </div>
+                <div class="back">
+                  <p>Welcome to the matrix...<br>
+                    Use this cube to navigate to different apps.</p>
+                  <p>Use the arrow keys to rotate the cube.<br>
+                    On touch screens, use one finger to rotate.</p>
+                  <p>I hope you enjoy playing around with the cube.<br>
+                    Comback often and thank you.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- face three -->
+            <div>
+              <!-- game -->
+              <h1>Tic Tac Toe</h1>
+                <table>
+		              <tr>
+			              <td class="cell" id="0"></td>
+			              <td class="cell" id="1"></td>
+		            	  <td class="cell" id="2"></td>
+	            	  </tr>
+		              <tr>
+			              <td class="cell" id="3"></td>
+			              <td class="cell" id="4"></td>
+		            	  <td class="cell" id="5"></td>
+		              </tr>
+		              <tr>
+			              <td class="cell" id="6"></td>
+			              <td class="cell" id="7"></td>
+			              <td class="cell" id="8"></td>
+	        	      </tr>
+            	  </table>
+	              <div class="endgame">
+		              <div class="text"></div>
+            	  </div>
+	                <button onClick="startGame()">Replay</button>
+
+                  <script src="js/tictactoe.js"></script>
+            </div>
+
+            <!-- face four -->
+            <div>
+              <!-- html5 video player -->
+              <h2>Video Player</h2>
+                <video controls="controls" width="350" height="300">
+                  <source src="media/cartoon.mp4">
+                </video>
+            </div>
+
+            <!-- face five -->
+            <div>
+              <!-- weather app -->
+              <p>Although this cube is fun, go <a href="weatherapp/weather.html">outside</a> sometimes...</p>
+            </div>
+
+            <!-- face six -->
+            <div>
+              <h1>Thank you</h1>
+              <p>If you liked this app and want to be notified
+                <br>
+                of future apps, please click on this <a href="registryform/registryform.html">link</a>
+                <br>
+                and fill out the form to join our registry.
+              </p>
+            </div>
+
+          </section>
+        </article>
+      </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="js/touch.js"></script>
+
+    </body>
+  </html>
